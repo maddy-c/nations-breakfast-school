@@ -102,17 +102,6 @@
         width: 50%;
       }
 
-      .button:hover {
-        animation-duration: 0.2s;
-        animation-name: hovered;
-        animation-fill-mode: forwards;
-      }
-
-      .button {
-        background-color: black;
-        opacity: 1;
-      }
-
       .column::after {
         clear: both;
       }
@@ -177,9 +166,27 @@
         bottom: 10%;
         left: 5%;
         opacity: 0;
+        z-index: 0;
+      }
+
+      .button {
+        opacity: 1;
+        z-index: 1;
+      }
+
+
+      .button:hover .buttontext {
         animation-name: textshow;
         animation-duration: 0.2s;
+        animation-fill-mode: forwards;
       }
+
+      .button:hover img {
+        animation-duration: 0.2s;
+        animation-name: hovered;
+        animation-fill-mode: forwards;
+      }
+
       </style>
     </head>
   <body>
@@ -197,12 +204,12 @@
     </div>
     <div class="images">
       <div class="row">
-        <div class="button">
-          <a href=""><img class="column" src="./images/one.jpg"></a>
-          <div class="buttontext">Specials</div>
+        <div class="panel button">
+          <a href=""><img class="column button" src="./images/one.jpg"></a>
+          <span class="buttontext">Specials</span>
         </div>
-        <div class="button">
-          <a href=""><img class="column" src="./images/two.jpg"></a>
+        <div class="panel button">
+          <a href=""><img class="column button" src="./images/two.jpg"></a>
         </div>
       </div>
       <img class="banner" src="./images/R4w6aER.jpg">
