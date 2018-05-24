@@ -3,40 +3,109 @@
   <head>
     <style>
     body {
-          background-color: grey;
+      background-image: url("images/darkbg.jpg");
+      background-size: 100%, 100%;
+      background-color: #262626;
+      font-family: Verdana;
+      margin: 0px;
     }
-    .header {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-right: 100px;
-      background-color: white;
-      margin: auto;
-      display: block;
+
+    dd {
+      color: #d7e0ef;
     }
-    .beverages  {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-right: 50px;
-      background-color: #8D4E85;
-      margin: auto;
-      display: block;
+
+    dt {
+      color: #d5edda;
+    }
+
+    header {
+      width: 100%;
+      height: 10%;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 0px;
+      color: white;
+      z-index: 100;
+    }
+
+    .menu {
+      margin-left: 20%;
+      margin-top: 5%;
+    }
+
+    .sidenav {
+      width: 20%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 0px;
+      color: white;
+      z-index: 99;
+    }
+
+    .sidenav a, a:hover, a:visited {
+      color: white;
+      text-decoration: none;
+    }
+
+    .links {
+      padding-top: 50%;
+      padding-left: 5%;
+      font-size: 30pt;
+    }
+
+    .logo {
+      height: 50px;
+      width: auto;
+      position: fixed;
+      top: 2%;
+      left: 1%;
+    }
+
+    .addons {
+      margin-left: 10%;
+    }
+
+    .beverages {
+      background-image: url("images/smoothie.jpg");
     }
     .maincourse {
-      padding-top: 100px;
-      padding-bottom: 100px;
-      padding-left: 100px;
-      background-color: grey;
-      margin: auto;
-      display: block;
+      text-indent: 5%;
+      background-image: url("images/pancakes.jpg");
     }
+
+    .layer {
+      background-color: rgba(0, 0, 0, 0.5 );
+    }
+
+    .section {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      background-attachment: fixed;
+      background-clip: content-box;
+      background-size: 80%, auto;
+      background-position: right;
+    }
+
     </style>
   <title>Nation's Breakfast Official Menu Page</title>
   </head>
   <body>
-    <div class="header">
-      <h1>Official Menu</h1>
+    <header>
+      <img class="logo" src="images/logocropped.png" alt="Nation's Breakfast"/>
+    </header>
+
+    <div class="sidenav">
+      <div class="links">
+        <a href="#beverages">Beverages</a>
+        <br>
+        <a href="#maincourse">Main Course</a>
+      </div>
     </div>
-    <div class="beverages">
+
+  <div class="menu">
+
+    <div class="beverages section"><div class="layer"><a name="beverages"></a>
       <h2>Beverages</h2>
       <p>All beverages come in three sizes; Small ($0.25 Extra), Medium ($0.50 Extra), and Large ($0.75 Extra).</p>
         <dl>
@@ -52,8 +121,9 @@
             <dd>Blended fresh chopped fruits of your choice from a selection of styles; Bannana, Pomegranate, Blueberry, Bannana Peanut Butter (Funky Monkey), Strawberry Bannana Pineapple, and Kale with Apple, all with cream and milk.</dd>
           <dt>Tea($1.99)</dt>
         </dl>
-    </div>
-    <div class="maincourse">
+    </div></div>
+    <br>
+    <div class="maincourse section" name="maincourse"><div class="layer"><a name="maincourse"></a>
       <h2>Main Course Meals</h2>
       <p><strong><em>Served Daily</em></strong></p>
         <dl>
@@ -84,6 +154,7 @@
           <dt><strong>Fruit Salad($1.99)</strong></dt>
             <dd>Freshly diced berries, watermelon, cantaloupe, kiwi, and pineapple.</dd>
         </dl>
+        <div class="addons" name="addons">
       <h3>Add-Ons ($0.50 Each)</h3>
         <ul>
           <li>Fruit Cups</li>
@@ -93,7 +164,9 @@
           <li>Linguisa</li>
           <li>Cinnamon Roll</li>
           <li>Hash Browns</li>
+        </div>
         </ul>
-      </div>
+      </div></div>
+    </div>
   </body>
 </html>
