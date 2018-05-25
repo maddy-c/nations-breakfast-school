@@ -7,7 +7,7 @@
         animation: fade 2s linear;
       }
       body {
-        background-color: black;
+        background-color: #222;
       }
       body, html {
         margin: 0;
@@ -83,7 +83,7 @@
         margin: auto;
         display: inline-block;
         position: relative;
-        height: 150px;
+        height: 7vw
       }
       .logo2 {
         margin: auto;
@@ -110,8 +110,55 @@
         width: 100%;
       }
 
+      .phonecontainer {
+        width: 50%;
+        float: left;
+        display: inline-block;
+        padding-bottom: 5%;
+      }
+
+      .app {
+        width: 49%;
+        float: right;
+      }
+
+      .apptext {
+        color: white;
+        font-family: Helvetica;
+        text-align: center;
+        font-size: 2vw;
+        width: 25%;
+        float: right;
+        display: inline-block;
+        padding-right: 10%;
+      }
+
+      .apptext::after {
+        clear: both;
+      }
+
+      .bothapp {
+        padding-top: 20%;
+      }
+
+      .phone {
+        width: 50%;
+        float: left;
+      }
+
+      .header-text {
+        font-family: Helvetica;
+        color: white;
+        font-size: 4vw;
+        width: 100%;
+        text-align: center;
+      }
+
+      .containerphone {}
+
       footer {
         width: 100%;
+        clear: both;
       }
 
       .background {
@@ -124,8 +171,7 @@
         position: relative;
       }
 
-      .padding {
-        background-color: rgba(0, 0, 0, 0.5);
+      .padding  {
         height: 50px;
       }
 
@@ -161,10 +207,21 @@
       .buttontext {
         position: absolute;
         font-family: Verdana;
-        font-size: 75pt;
+        font-size: 5vw;
         color: white;
-        bottom: 10%;
-        left: 5%;
+        bottom: 10vw;
+        left: 5vw;
+        opacity: 0;
+        z-index: 0;
+      }
+
+      .buttontext2 {
+        position: absolute;
+        font-family: Verdana;
+        font-size: 5vw;
+        color: white;
+        bottom: 10vw;
+        right: 5vw;
         opacity: 0;
         z-index: 0;
       }
@@ -181,10 +238,20 @@
         animation-fill-mode: forwards;
       }
 
+      .button:hover .buttontext2 {
+        animation-name: textshow;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+      }
+
       .button:hover img {
         animation-duration: 0.2s;
         animation-name: hovered;
         animation-fill-mode: forwards;
+      }
+
+      .padding {
+        padding: 100px;
       }
 
       </style>
@@ -196,7 +263,7 @@
       }
     </script>
     <div class="header">
-      <a href="index.html"><img class="logo" src="./images/OoqnMgx.png"></a>
+      <a href="index.html"><img class="logo" src="./images/logocropped.png"></a>
       <div class="other">
         <h1 class="title-bar-app">Get the App</h1>
         <h1 class="title-bar-menu"><a href="menu.html">Our Menu</a></h1>
@@ -210,15 +277,27 @@
         </div>
         <div class="panel button">
           <a href=""><img class="column button" src="./images/two.jpg"></a>
+          <span class="buttontext2">New Items</span>
         </div>
       </div>
       <img class="banner" src="./images/R4w6aER.jpg">
     </div>
-    <div class="padding"></div>
-    <footer>
+    <div class="containerphone">
+      <h1 class="header-text">DOWNLOAD OUR APP</h1>
+      <div class="phonecontainer">
+        <img class="phone" src="./images/SP727_iphone6s_plus_rosegold_select_2015.png">
+        <div class="bothapp">
+          <img class="app" src="./images/ww_app-store-badge_150909.png">
+          <img class="app" src="./images/google-play-badge.png">
+        </div>
+      </div>
+      <p class="apptext">SEND ONE OF OUR TRUCKS TO YOUR WORK, HOME, OR ANY LOCATION WITH THE NATIONS BREAKFAST APP. FREE ON THE APP STORE, AND GOOGLE PLAY STORE.</p>
+      </div>
+      <div class="padding"></div>
+     <footer>
       <div class="background">
         <div class="layer">
-          <img class="logo2" src="./images/OoqnMgx.png">
+          <img class="logo2" src="./images/logocropped.png">
         </div>
       </div>
     <footer>
