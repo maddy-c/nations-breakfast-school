@@ -9,11 +9,31 @@
         animation: fade 2s linear;
       }
       body {
-        background-image: url("images/breakfast.jpg");
+
+        background-image: url("images/breakfast.png");
         background-color: #222;
         max-width: 100%;
 
       }
+
+      /* .fadein {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        position: fixed;
+        background-color: black;
+        z-index: 255;
+        animation-delay: 0.2s;
+        animation-name: loaded;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes loaded {
+        from {opacity: 1;}
+        to {opacity: 0; display: none;}
+      } */
+
       body, html {
         margin: 0;
         padding: 0;
@@ -113,6 +133,11 @@
 
       .row {
         background-color: black;
+        font-weight: bold;
+      }
+
+      .images {
+        background-color: black;
       }
 
       .banner {
@@ -147,7 +172,7 @@
       }
 
       .bothapp {
-        padding-top: 20%;
+        padding-top: 10%;
       }
 
       .phone {
@@ -170,6 +195,24 @@
         clear: both;
       }
 
+      .footer {
+        color: white;
+        font-family: Verdana;
+        font-size: 1vw;
+      }
+
+      .footercol1 {
+        width: 20%;
+        text-align: left;
+        float: left;
+      }
+
+      .footercol2 {
+        width: 20%;
+        text-align: right;
+        float: right;
+
+      }
       .background {
         background-image: url("images/breakfast-istock.jpg");
         position: relative;
@@ -210,15 +253,26 @@
 
       @keyframes textshow {
         from {opacity: 0}
-        to {opacity: 1;}
+        to {opacity: 0.8;}
       }
 
       .buttontext {
         position: absolute;
         font-family: Verdana;
-        font-size: 5vw;
+        font-size: 7vw;
         color: white;
         bottom: 10vw;
+        left: 5vw;
+        opacity: 0;
+        z-index: 0;
+      }
+
+      .buttoninfo {
+        position: absolute;
+        font-family: Verdana;
+        font-size: 3vw;
+        color: white;
+        bottom: 8vw;
         left: 5vw;
         opacity: 0;
         z-index: 0;
@@ -227,10 +281,21 @@
       .buttontext2 {
         position: absolute;
         font-family: Verdana;
-        font-size: 5vw;
+        font-size: 6vw;
         color: white;
         bottom: 10vw;
-        right: 5vw;
+        right: 4vw;
+        opacity: 0;
+        z-index: 0;
+      }
+
+      .buttoninfo2 {
+        position: absolute;
+        font-family: Verdana;
+        font-size: 2.3vw;
+        color: white;
+        bottom: 8.5vw;
+        right: 4vw;
         opacity: 0;
         z-index: 0;
       }
@@ -253,6 +318,18 @@
         animation-fill-mode: forwards;
       }
 
+      .button:hover .buttoninfo {
+        animation-name: textshow;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+      }
+
+      .button:hover .buttoninfo2 {
+        animation-name: textshow;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+      }
+
       .button:hover img {
         animation-duration: 0.2s;
         animation-name: hovered;
@@ -265,6 +342,7 @@
       </style>
     </head>
   <body>
+    <div class="fadein"></div>
     <script language="javascript">
       if (window.navigator.userAgent.indexOf("Edge") > -1) {
         document.location = "indexedge.html";
@@ -281,11 +359,13 @@
       <div class="row">
         <div class="panel button">
           <a href=""><img class="column button" src="./images/one.jpg"></a>
-          <span class="buttontext">Specials</span>
+          <span class="buttontext">SPECIALS</span>
+          <span class="buttoninfo">SERVED EVERY MORNING</span>
         </div>
         <div class="panel button">
           <a href=""><img class="column button" src="./images/two.jpg"></a>
-          <span class="buttontext2">New Items</span>
+          <span class="buttontext2">NEW ITEMS</span>
+          <span class="buttoninfo2">FRESHLY MADE BREAKFAST PIZZA</span>
         </div>
       </div>
       <img class="banner" src="./images/R4w6aER.jpg">
@@ -300,11 +380,23 @@
         </div>
       </div>
       <p class="apptext">SEND ONE OF OUR TRUCKS TO YOUR WORK, HOME, OR ANY LOCATION WITH THE NATIONS BREAKFAST APP. FREE ON THE APP STORE, AND GOOGLE PLAY STORE.</p>
-      </div>
+    </div>
      <footer>
       <div class="background">
         <div class="layer">
           <img class="logo2" src="./images/logocropped.png">
+          <div class="footer">
+            <span>
+              <div class="footercol1">
+                <h1>CONTACT US</h1>
+                <p>You can find us on Facebook, Twitter, and Instagram @NationsBreakfast for any promotional offers or services and discounts.</p>
+              </div>
+              <div class="footercol2">
+                <h1>MOBILE SERVICES</h1>
+                <p>Nation's Breakfast is a mobile food truck stationed across multiple states in the United States. Deliver any of our specialties right to your house or work place.</p>
+              </div>
+            </span>
+          </div>
         </div>
       </div>
     </footer>
